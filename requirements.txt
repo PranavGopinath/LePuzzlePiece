@@ -1,0 +1,7 @@
+# SmolVLA dependencies
+torch>=2.3.0
+torchvision>=0.18.0
+lerobot[smolvla]
+pillow>=10.0.0
+numpy>=1.24.0
+requests>=2.31.0

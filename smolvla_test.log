@@ -1,0 +1,469 @@
+2026-01-31 17:11:14 | INFO     | __main__ | ======================================================================
+2026-01-31 17:11:14 | INFO     | __main__ | SmolVLA Test Script - Starting
+2026-01-31 17:11:14 | INFO     | __main__ | ======================================================================
+2026-01-31 17:11:14 | INFO     | __main__ | Importing torch...
+2026-01-31 17:11:17 | INFO     | __main__ | torch imported in 3.86s
+2026-01-31 17:11:17 | INFO     | __main__ | Importing numpy and PIL...
+2026-01-31 17:11:18 | INFO     | __main__ | Core imports complete
+2026-01-31 17:11:18 | INFO     | __main__ | ======================================================================
+2026-01-31 17:11:18 | INFO     | __main__ | SmolVLA Inference Test
+2026-01-31 17:11:18 | INFO     | __main__ | Model: 450M parameters - runs without quantization
+2026-01-31 17:11:18 | INFO     | __main__ | ======================================================================
+2026-01-31 17:11:18 | INFO     | __main__ | Clearing CUDA cache...
+2026-01-31 17:11:18 | INFO     | __main__ | Using CUDA device
+2026-01-31 17:11:18 | INFO     | __main__ | ----------------------------------------------------------------------
+2026-01-31 17:11:18 | INFO     | __main__ | SYSTEM INFORMATION
+2026-01-31 17:11:18 | INFO     | __main__ | ----------------------------------------------------------------------
+2026-01-31 17:11:18 | INFO     | __main__ | Python version: 3.11.5 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:26:23) [MSC v.1916 64 bit (AMD64)]
+2026-01-31 17:11:18 | INFO     | __main__ | Python executable: C:\PAI\LePuzzlePiece\.venv\Scripts\python.exe
+2026-01-31 17:11:18 | INFO     | __main__ | Working directory: C:\PAI\LePuzzlePiece
+2026-01-31 17:11:18 | INFO     | __main__ | PyTorch version: 2.7.1+cu118
+2026-01-31 17:11:18 | INFO     | __main__ | CUDA available: True
+2026-01-31 17:11:18 | INFO     | __main__ | CUDA version: 11.8
+2026-01-31 17:11:18 | INFO     | __main__ | cuDNN version: 90100
+2026-01-31 17:11:18 | INFO     | __main__ | CUDA device count: 1
+2026-01-31 17:11:18 | INFO     | __main__ |   Device 0: NVIDIA GeForce RTX 4050 Laptop GPU
+2026-01-31 17:11:18 | INFO     | __main__ |     - Compute capability: 8.9
+2026-01-31 17:11:18 | INFO     | __main__ |     - Total memory: 6.00 GB
+2026-01-31 17:11:18 | INFO     | __main__ |     - Multi-processor count: 20
+2026-01-31 17:11:18 | INFO     | __main__ | lerobot version: 0.4.3
+2026-01-31 17:11:18 | INFO     | __main__ | [Initial state] GPU Memory - Allocated: 0.000 GB | Reserved: 0.000 GB | Free: 5.997 GB
+2026-01-31 17:11:18 | INFO     | __main__ | ----------------------------------------------------------------------
+2026-01-31 17:11:18 | INFO     | __main__ | ----------------------------------------------------------------------
+2026-01-31 17:11:18 | INFO     | __main__ | LOADING SMOLVLA MODEL AND PROCESSORS
+2026-01-31 17:11:18 | INFO     | __main__ | ----------------------------------------------------------------------
+2026-01-31 17:11:18 | INFO     | __main__ | [Before model load] GPU Memory - Allocated: 0.000 GB | Reserved: 0.000 GB | Free: 5.997 GB
+2026-01-31 17:11:18 | INFO     | __main__ | Importing SmolVLAPolicy from lerobot...
+2026-01-31 17:11:20 | DEBUG    | datasets | PyTorch version 2.7.1+cu118 available.
+2026-01-31 17:11:25 | DEBUG    | root | Detected transformers version: 4.57.6
+2026-01-31 17:11:30 | INFO     | __main__ | Using lerobot.policies import path
+2026-01-31 17:11:30 | INFO     | __main__ | SmolVLAPolicy imported in 11.25s
+2026-01-31 17:11:30 | INFO     | __main__ | Importing preprocessor factory...
+2026-01-31 17:11:30 | INFO     | __main__ | Using lerobot.policies.factory
+2026-01-31 17:11:30 | INFO     | __main__ | Loading model: lerobot/smolvla_base
+2026-01-31 17:11:30 | INFO     | __main__ | This may take a few minutes on first run (downloading model)...
+2026-01-31 17:11:30 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): huggingface.co:443
+2026-01-31 17:11:31 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /lerobot/smolvla_base/resolve/main/config.json HTTP/1.1" 307 0
+2026-01-31 17:11:31 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/lerobot/smolvla_base/c83c3163b8ca9b7e67c509fffd9121e66cb96205/config.json HTTP/1.1" 200 0
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_metavar | Metavar for type None: None
+2026-01-31 17:11:31 | DEBUG    | draccus.help_formatter | action type: None, Result: , nargs: 0, default metavar: None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_metavar | Metavar for type <class 'str'>: str
+2026-01-31 17:11:31 | DEBUG    | draccus.help_formatter | action type: <class 'str'>, Result: str, nargs: None, default metavar: None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at n_obs_steps has a default value of 1
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at input_features has a default value of {}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at output_features has a default value of {}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at device has a default value of None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at use_amp has a default value of False
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at use_peft has a default value of False
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at push_to_hub has a default value of True
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at repo_id has a default value of None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at private has a default value of None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at tags has a default value of None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at license has a default value of None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at pretrained_path has a default value of None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.docstring | Warning: Unable to parse attribute docstring:             current step and additional steps going back).
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'n_obs_steps': {'required': False, 'dest': 'n_obs_steps', 'default': 1, 'help': ' ', 'type': <class 'int'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'input_features': {'required': False, 'dest': 'input_features', 'default': {}, 'help': '`input_features` can be set to None/null in order to infer those values from the dataset.', 'type': typing.Optional[typing.Dict[str, lerobot.configs.types.PolicyFeature]]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'output_features': {'required': False, 'dest': 'output_features', 'default': {}, 'help': ' ', 'type': typing.Optional[typing.Dict[str, lerobot.configs.types.PolicyFeature]]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'device': {'required': False, 'dest': 'device', 'default': None, 'help': 'e.g. "cuda", "cuda:0", "cpu", or "mps"', 'type': typing.Optional[str]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'use_amp': {'required': False, 'dest': 'use_amp', 'default': False, 'help': '`use_amp` determines whether to use Automatic Mixed Precision (AMP) for training and evaluation. With AMP,\nautomatic gradient scaling is used.', 'type': <class 'bool'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'use_peft': {'required': False, 'dest': 'use_peft', 'default': False, 'help': 'Whether the policy employed PEFT for training.', 'type': <class 'bool'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'push_to_hub': {'required': False, 'dest': 'push_to_hub', 'default': True, 'help': 'type: ignore[assignment] # TODO: use a different name to avoid override', 'type': <class 'bool'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'repo_id': {'required': False, 'dest': 'repo_id', 'default': None, 'type': typing.Optional[str]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'private': {'required': False, 'dest': 'private', 'default': None, 'help': 'Upload on private repository on the Hugging Face hub.', 'type': typing.Optional[bool]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'tags': {'required': False, 'dest': 'tags', 'default': None, 'help': 'Add tags to your policy on the hub.', 'type': typing.Optional[typing.List[str]]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'license': {'required': False, 'dest': 'license', 'default': None, 'help': 'Add tags to your policy on the hub.', 'type': typing.Optional[str]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'pretrained_path': {'required': False, 'dest': 'pretrained_path', 'default': None, 'help': 'Either the repo ID of a model hosted on the Hub or a path to a directory containing weights\nsaved using `Policy.save_pretrained`. If not provided, the policy is initialized from scratch.', 'type': typing.Optional[pathlib.Path]}
+2026-01-31 17:11:31 | DEBUG    | draccus.argparsing | 
+POST PROCESSING
+
+2026-01-31 17:11:31 | DEBUG    | draccus.argparsing | (raw) parsed args: Namespace()
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | from_dict for <class 'lerobot.policies.smolvla.configuration_smolvla.SmolVLAConfig'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = n_obs_steps, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = input_features, type = typing.Optional[dict[str, lerobot.configs.types.PolicyFeature]]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decoding a Union field: typing.Optional[dict[str, lerobot.configs.types.PolicyFeature]]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decoding a Dict field: dict[str, lerobot.configs.types.PolicyFeature]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | from_dict for <class 'lerobot.configs.types.PolicyFeature'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = type, type = <enum 'FeatureType'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = shape, type = tuple[int, ...]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decoding a Tuple field: tuple[int, ...]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | from_dict for <class 'lerobot.configs.types.PolicyFeature'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = type, type = <enum 'FeatureType'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = shape, type = tuple[int, ...]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | from_dict for <class 'lerobot.configs.types.PolicyFeature'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = type, type = <enum 'FeatureType'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = shape, type = tuple[int, ...]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | from_dict for <class 'lerobot.configs.types.PolicyFeature'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = type, type = <enum 'FeatureType'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = shape, type = tuple[int, ...]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = output_features, type = typing.Optional[dict[str, lerobot.configs.types.PolicyFeature]]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | from_dict for <class 'lerobot.configs.types.PolicyFeature'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = type, type = <enum 'FeatureType'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = shape, type = tuple[int, ...]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = device, type = typing.Optional[str]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decoding a Union field: typing.Optional[str]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = use_amp, type = <class 'bool'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = push_to_hub, type = <class 'bool'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = repo_id, type = typing.Optional[str]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = private, type = typing.Optional[bool]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decoding a Union field: typing.Optional[bool]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = tags, type = typing.Optional[list[str]]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decoding a Union field: typing.Optional[list[str]]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decoding a List field: list[str]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = license, type = typing.Optional[str]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = chunk_size, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = n_action_steps, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = normalization_mapping, type = dict[str, lerobot.configs.types.NormalizationMode]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decoding a Dict field: dict[str, lerobot.configs.types.NormalizationMode]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = max_state_dim, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = max_action_dim, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = resize_imgs_with_padding, type = tuple[int, int]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decoding a Tuple field: tuple[int, int]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = empty_cameras, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = adapt_to_pi_aloha, type = <class 'bool'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = use_delta_joint_actions_aloha, type = <class 'bool'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = tokenizer_max_length, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = num_steps, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = use_cache, type = <class 'bool'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = freeze_vision_encoder, type = <class 'bool'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = train_expert_only, type = <class 'bool'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = train_state_proj, type = <class 'bool'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = optimizer_lr, type = <class 'float'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = optimizer_betas, type = tuple[float, float]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decoding a Tuple field: tuple[float, float]
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = optimizer_eps, type = <class 'float'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = optimizer_weight_decay, type = <class 'float'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = optimizer_grad_clip_norm, type = <class 'float'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = scheduler_warmup_steps, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = scheduler_decay_steps, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = scheduler_decay_lr, type = <class 'float'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = vlm_model_name, type = <class 'str'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = load_vlm_weights, type = <class 'bool'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = add_image_special_tokens, type = <class 'bool'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = attention_mode, type = <class 'str'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = prefix_length, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = pad_language_to, type = <class 'str'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = num_expert_layers, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = num_vlm_layers, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = self_attn_every_n_layers, type = <class 'int'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = expert_width_multiplier, type = <class 'float'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = min_period, type = <class 'float'>
+2026-01-31 17:11:31 | DEBUG    | draccus.parsers.decoding | Decode name = max_period, type = <class 'float'>
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_metavar | Metavar for type None: None
+2026-01-31 17:11:31 | DEBUG    | draccus.help_formatter | action type: None, Result: , nargs: 0, default metavar: None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_metavar | Metavar for type <class 'str'>: str
+2026-01-31 17:11:31 | DEBUG    | draccus.help_formatter | action type: <class 'str'>, Result: str, nargs: None, default metavar: None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at n_obs_steps has a default value of 1
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at input_features has a default value of {}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at output_features has a default value of {}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at device has a default value of None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at use_amp has a default value of False
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at use_peft has a default value of False
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at push_to_hub has a default value of True
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at repo_id has a default value of None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at private has a default value of None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at tags has a default value of None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at license has a default value of None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at pretrained_path has a default value of None
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at chunk_size has a default value of 50
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at n_action_steps has a default value of 50
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at normalization_mapping has a default value of {'VISUAL': <NormalizationMode.IDENTITY: 'IDENTITY'>, 'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>, 'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at max_state_dim has a default value of 32
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at max_action_dim has a default value of 32
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at resize_imgs_with_padding has a default value of (512, 512)
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at empty_cameras has a default value of 0
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at adapt_to_pi_aloha has a default value of False
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at use_delta_joint_actions_aloha has a default value of False
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at tokenizer_max_length has a default value of 48
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at num_steps has a default value of 10
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at use_cache has a default value of True
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at freeze_vision_encoder has a default value of True
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at train_expert_only has a default value of True
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at train_state_proj has a default value of True
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at optimizer_lr has a default value of 0.0001
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at optimizer_betas has a default value of (0.9, 0.95)
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at optimizer_eps has a default value of 1e-08
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at optimizer_weight_decay has a default value of 1e-10
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at optimizer_grad_clip_norm has a default value of 10
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at scheduler_warmup_steps has a default value of 1000
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at scheduler_decay_steps has a default value of 30000
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at scheduler_decay_lr has a default value of 2.5e-06
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at vlm_model_name has a default value of HuggingFaceTB/SmolVLM2-500M-Video-Instruct
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at load_vlm_weights has a default value of False
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at add_image_special_tokens has a default value of False
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at attention_mode has a default value of cross_attn
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at prefix_length has a default value of -1
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at pad_language_to has a default value of longest
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at num_expert_layers has a default value of -1
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at num_vlm_layers has a default value of 16
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at self_attn_every_n_layers has a default value of 2
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at expert_width_multiplier has a default value of 0.75
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at min_period has a default value of 0.004
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at max_period has a default value of 4.0
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'n_obs_steps': {'required': False, 'dest': 'n_obs_steps', 'default': 1, 'help': 'Input / output structure.', 'type': <class 'int'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'input_features': {'required': False, 'dest': 'input_features', 'default': {}, 'help': '`input_features` can be set to None/null in order to infer those values from the dataset.', 'type': typing.Optional[typing.Dict[str, lerobot.configs.types.PolicyFeature]]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'output_features': {'required': False, 'dest': 'output_features', 'default': {}, 'help': ' ', 'type': typing.Optional[typing.Dict[str, lerobot.configs.types.PolicyFeature]]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'device': {'required': False, 'dest': 'device', 'default': None, 'help': 'e.g. "cuda", "cuda:0", "cpu", or "mps"', 'type': typing.Optional[str]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'use_amp': {'required': False, 'dest': 'use_amp', 'default': False, 'help': '`use_amp` determines whether to use Automatic Mixed Precision (AMP) for training and evaluation. With AMP,\nautomatic gradient scaling is used.', 'type': <class 'bool'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'use_peft': {'required': False, 'dest': 'use_peft', 'default': False, 'help': 'Whether the policy employed PEFT for training.', 'type': <class 'bool'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'push_to_hub': {'required': False, 'dest': 'push_to_hub', 'default': True, 'help': 'type: ignore[assignment] # TODO: use a different name to avoid override', 'type': <class 'bool'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'repo_id': {'required': False, 'dest': 'repo_id', 'default': None, 'type': typing.Optional[str]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'private': {'required': False, 'dest': 'private', 'default': None, 'help': 'Upload on private repository on the Hugging Face hub.', 'type': typing.Optional[bool]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'tags': {'required': False, 'dest': 'tags', 'default': None, 'help': 'Add tags to your policy on the hub.', 'type': typing.Optional[typing.List[str]]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'license': {'required': False, 'dest': 'license', 'default': None, 'help': 'Add tags to your policy on the hub.', 'type': typing.Optional[str]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'pretrained_path': {'required': False, 'dest': 'pretrained_path', 'default': None, 'help': 'Either the repo ID of a model hosted on the Hub or a path to a directory containing weights\nsaved using `Policy.save_pretrained`. If not provided, the policy is initialized from scratch.', 'type': typing.Optional[pathlib.Path]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'chunk_size': {'required': False, 'dest': 'chunk_size', 'default': 50, 'help': ' ', 'type': <class 'int'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'n_action_steps': {'required': False, 'dest': 'n_action_steps', 'default': 50, 'help': ' ', 'type': <class 'int'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.docstring | Warning: Unable to parse attribute docstring:         default_factory=lambda: {
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'normalization_mapping': {'required': False, 'dest': 'normalization_mapping', 'default': {'VISUAL': <NormalizationMode.IDENTITY: 'IDENTITY'>, 'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>, 'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>}, 'help': ' ', 'type': typing.Dict[str, lerobot.configs.types.NormalizationMode]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'max_state_dim': {'required': False, 'dest': 'max_state_dim', 'default': 32, 'help': '\n\nShorter state and action vectors will be padded', 'type': <class 'int'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'max_action_dim': {'required': False, 'dest': 'max_action_dim', 'default': 32, 'help': ' ', 'type': <class 'int'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'resize_imgs_with_padding': {'required': False, 'dest': 'resize_imgs_with_padding', 'default': (512, 512), 'help': 'Image preprocessing', 'type': typing.Tuple[int, int]}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'empty_cameras': {'required': False, 'dest': 'empty_cameras', 'default': 0, 'help': 'Add empty images. Used by smolvla_aloha_sim which adds the empty\nleft and right wrist cameras in addition to the top camera.', 'type': <class 'int'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'adapt_to_pi_aloha': {'required': False, 'dest': 'adapt_to_pi_aloha', 'default': False, 'help': 'Converts the joint and gripper values from the standard Aloha space to\nthe space used by the pi internal runtime which was used to train the base model.', 'type': <class 'bool'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'use_delta_joint_actions_aloha': {'required': False, 'dest': 'use_delta_joint_actions_aloha', 'default': False, 'help': 'Converts joint dimensions to deltas with respect to the current state before passing to the model.\nGripper dimensions will remain in absolute values.', 'type': <class 'bool'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'tokenizer_max_length': {'required': False, 'dest': 'tokenizer_max_length', 'default': 48, 'help': 'Tokenizer', 'type': <class 'int'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'num_steps': {'required': False, 'dest': 'num_steps', 'default': 10, 'help': 'Decoding', 'type': <class 'int'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'use_cache': {'required': False, 'dest': 'use_cache', 'default': True, 'help': 'Attention utils', 'type': <class 'bool'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'freeze_vision_encoder': {'required': False, 'dest': 'freeze_vision_encoder', 'default': True, 'help': 'Finetuning settings', 'type': <class 'bool'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'train_expert_only': {'required': False, 'dest': 'train_expert_only', 'default': True, 'help': ' ', 'type': <class 'bool'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'train_state_proj': {'required': False, 'dest': 'train_state_proj', 'default': True, 'help': ' ', 'type': <class 'bool'>}
+2026-01-31 17:11:31 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'optimizer_lr': {'required': False, 'dest': 'optimizer_lr', 'default': 0.0001, 'help': 'Training presets', 'type': <class 'float'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'optimizer_betas': {'required': False, 'dest': 'optimizer_betas', 'default': (0.9, 0.95), 'help': ' ', 'type': typing.Tuple[float, float]}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'optimizer_eps': {'required': False, 'dest': 'optimizer_eps', 'default': 1e-08, 'help': ' ', 'type': <class 'float'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'optimizer_weight_decay': {'required': False, 'dest': 'optimizer_weight_decay', 'default': 1e-10, 'help': ' ', 'type': <class 'float'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'optimizer_grad_clip_norm': {'required': False, 'dest': 'optimizer_grad_clip_norm', 'default': 10, 'help': ' ', 'type': <class 'float'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'scheduler_warmup_steps': {'required': False, 'dest': 'scheduler_warmup_steps', 'default': 1000, 'help': ' ', 'type': <class 'int'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'scheduler_decay_steps': {'required': False, 'dest': 'scheduler_decay_steps', 'default': 30000, 'help': ' ', 'type': <class 'int'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'scheduler_decay_lr': {'required': False, 'dest': 'scheduler_decay_lr', 'default': 2.5e-06, 'help': ' ', 'type': <class 'float'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'vlm_model_name': {'required': False, 'dest': 'vlm_model_name', 'default': 'HuggingFaceTB/SmolVLM2-500M-Video-Instruct', 'help': 'Select the VLM backbone.', 'type': <class 'str'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'load_vlm_weights': {'required': False, 'dest': 'load_vlm_weights', 'default': False, 'help': 'Set to True in case of training the expert from scratch. True when init from pretrained SmolVLA weights', 'type': <class 'bool'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'add_image_special_tokens': {'required': False, 'dest': 'add_image_special_tokens', 'default': False, 'help': 'Whether to use special image tokens around image features.', 'type': <class 'bool'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'attention_mode': {'required': False, 'dest': 'attention_mode', 'default': 'cross_attn', 'help': ' ', 'type': <class 'str'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'prefix_length': {'required': False, 'dest': 'prefix_length', 'default': -1, 'help': ' ', 'type': <class 'int'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'pad_language_to': {'required': False, 'dest': 'pad_language_to', 'default': 'longest', 'help': '"max_length"', 'type': <class 'str'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'num_expert_layers': {'required': False, 'dest': 'num_expert_layers', 'default': -1, 'help': 'Less or equal to 0 is the default where the action expert has the same number of layers of VLM. Otherwise the expert have less layers.', 'type': <class 'int'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'num_vlm_layers': {'required': False, 'dest': 'num_vlm_layers', 'default': 16, 'help': 'Number of layers used in the VLM (first num_vlm_layers layers)', 'type': <class 'int'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'self_attn_every_n_layers': {'required': False, 'dest': 'self_attn_every_n_layers', 'default': 2, 'help': 'Interleave SA layers each self_attn_every_n_layers', 'type': <class 'int'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'expert_width_multiplier': {'required': False, 'dest': 'expert_width_multiplier', 'default': 0.75, 'help': 'The action expert hidden size (wrt to the VLM)', 'type': <class 'float'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'min_period': {'required': False, 'dest': 'min_period', 'default': 0.004, 'help': 'sensitivity range for the timestep used in sine-cosine positional encoding', 'type': <class 'float'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'max_period': {'required': False, 'dest': 'max_period', 'default': 4.0, 'help': ' ', 'type': <class 'float'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_metavar | Metavar for type <class 'str'>: str
+2026-01-31 17:11:32 | DEBUG    | draccus.help_formatter | action type: <class 'str'>, Result: str, nargs: None, default metavar: None
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at rtc_config.enabled has a default value of False
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at rtc_config.prefix_attention_schedule has a default value of RTCAttentionSchedule.LINEAR
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at rtc_config.max_guidance_weight has a default value of 10.0
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at rtc_config.execution_horizon has a default value of 10
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at rtc_config.debug has a default value of False
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.dataclass_wrapper | wrapped field at rtc_config.debug_maxlen has a default value of 100
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'enabled': {'required': False, 'dest': 'rtc_config.enabled', 'default': False, 'help': 'Infrastructure', 'type': <class 'bool'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'prefix_attention_schedule': {'required': False, 'dest': 'rtc_config.prefix_attention_schedule', 'default': <RTCAttentionSchedule.LINEAR: 'LINEAR'>, 'help': 'Core RTC settings\nTodo change to exp', 'type': <enum 'RTCAttentionSchedule'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'max_guidance_weight': {'required': False, 'dest': 'rtc_config.max_guidance_weight', 'default': 10.0, 'help': ' ', 'type': <class 'float'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'execution_horizon': {'required': False, 'dest': 'rtc_config.execution_horizon', 'default': 10, 'help': ' ', 'type': <class 'int'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'debug': {'required': False, 'dest': 'rtc_config.debug', 'default': False, 'help': 'Debug settings', 'type': <class 'bool'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.wrappers.field_wrapper | Arg options for field 'debug_maxlen': {'required': False, 'dest': 'rtc_config.debug_maxlen', 'default': 100, 'help': ' ', 'type': <class 'int'>}
+2026-01-31 17:11:32 | DEBUG    | draccus.argparsing | 
+POST PROCESSING
+
+2026-01-31 17:11:32 | DEBUG    | draccus.argparsing | (raw) parsed args: Namespace()
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | from_dict for <class 'lerobot.policies.smolvla.configuration_smolvla.SmolVLAConfig'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = n_obs_steps, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = input_features, type = typing.Optional[dict[str, lerobot.configs.types.PolicyFeature]]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | from_dict for <class 'lerobot.configs.types.PolicyFeature'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = type, type = <enum 'FeatureType'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = shape, type = tuple[int, ...]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | from_dict for <class 'lerobot.configs.types.PolicyFeature'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = type, type = <enum 'FeatureType'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = shape, type = tuple[int, ...]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | from_dict for <class 'lerobot.configs.types.PolicyFeature'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = type, type = <enum 'FeatureType'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = shape, type = tuple[int, ...]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | from_dict for <class 'lerobot.configs.types.PolicyFeature'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = type, type = <enum 'FeatureType'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = shape, type = tuple[int, ...]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = output_features, type = typing.Optional[dict[str, lerobot.configs.types.PolicyFeature]]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | from_dict for <class 'lerobot.configs.types.PolicyFeature'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = type, type = <enum 'FeatureType'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = shape, type = tuple[int, ...]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = device, type = typing.Optional[str]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = use_amp, type = <class 'bool'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = push_to_hub, type = <class 'bool'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = repo_id, type = typing.Optional[str]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = private, type = typing.Optional[bool]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = tags, type = typing.Optional[list[str]]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = license, type = typing.Optional[str]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = chunk_size, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = n_action_steps, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = normalization_mapping, type = dict[str, lerobot.configs.types.NormalizationMode]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = max_state_dim, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = max_action_dim, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = resize_imgs_with_padding, type = tuple[int, int]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = empty_cameras, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = adapt_to_pi_aloha, type = <class 'bool'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = use_delta_joint_actions_aloha, type = <class 'bool'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = tokenizer_max_length, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = num_steps, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = use_cache, type = <class 'bool'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = freeze_vision_encoder, type = <class 'bool'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = train_expert_only, type = <class 'bool'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = train_state_proj, type = <class 'bool'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = optimizer_lr, type = <class 'float'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = optimizer_betas, type = tuple[float, float]
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = optimizer_eps, type = <class 'float'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = optimizer_weight_decay, type = <class 'float'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = optimizer_grad_clip_norm, type = <class 'float'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = scheduler_warmup_steps, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = scheduler_decay_steps, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = scheduler_decay_lr, type = <class 'float'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = vlm_model_name, type = <class 'str'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = load_vlm_weights, type = <class 'bool'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = add_image_special_tokens, type = <class 'bool'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = attention_mode, type = <class 'str'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = prefix_length, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = pad_language_to, type = <class 'str'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = num_expert_layers, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = num_vlm_layers, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = self_attn_every_n_layers, type = <class 'int'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = expert_width_multiplier, type = <class 'float'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = min_period, type = <class 'float'>
+2026-01-31 17:11:32 | DEBUG    | draccus.parsers.decoding | Decode name = max_period, type = <class 'float'>
+2026-01-31 17:11:32 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/config.json HTTP/1.1" 307 0
+2026-01-31 17:11:32 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/config.json HTTP/1.1" 200 0
+2026-01-31 17:11:35 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/generation_config.json HTTP/1.1" 307 0
+2026-01-31 17:11:35 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/generation_config.json HTTP/1.1" 200 0
+2026-01-31 17:11:35 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/custom_generate/generate.py HTTP/1.1" 404 0
+2026-01-31 17:11:35 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/processor_config.json HTTP/1.1" 307 0
+2026-01-31 17:11:35 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/processor_config.json HTTP/1.1" 200 0
+2026-01-31 17:11:35 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "GET /api/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2026-01-31 17:11:35 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/processor_config.json HTTP/1.1" 307 0
+2026-01-31 17:11:35 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/processor_config.json HTTP/1.1" 200 0
+2026-01-31 17:11:35 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/chat_template.json HTTP/1.1" 307 0
+2026-01-31 17:11:35 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/chat_template.json HTTP/1.1" 200 0
+2026-01-31 17:11:35 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/chat_template.jinja HTTP/1.1" 404 0
+2026-01-31 17:11:35 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/audio_tokenizer_config.json HTTP/1.1" 404 0
+2026-01-31 17:11:36 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/preprocessor_config.json HTTP/1.1" 307 0
+2026-01-31 17:11:36 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/preprocessor_config.json HTTP/1.1" 200 0
+2026-01-31 17:11:36 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/processor_config.json HTTP/1.1" 307 0
+2026-01-31 17:11:36 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/processor_config.json HTTP/1.1" 200 0
+2026-01-31 17:11:36 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2026-01-31 17:11:36 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/tokenizer_config.json HTTP/1.1" 200 0
+2026-01-31 17:11:36 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "GET /api/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2026-01-31 17:11:36 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "GET /api/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/tree/main?recursive=True&expand=False HTTP/1.1" 200 9294
+2026-01-31 17:11:37 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/video_preprocessor_config.json HTTP/1.1" 404 0
+2026-01-31 17:11:37 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/preprocessor_config.json HTTP/1.1" 307 0
+2026-01-31 17:11:37 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/preprocessor_config.json HTTP/1.1" 200 0
+2026-01-31 17:11:37 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/processor_config.json HTTP/1.1" 307 0
+2026-01-31 17:11:37 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/processor_config.json HTTP/1.1" 200 0
+2026-01-31 17:11:37 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "GET /api/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2026-01-31 17:11:37 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/processor_config.json HTTP/1.1" 307 0
+2026-01-31 17:11:37 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/processor_config.json HTTP/1.1" 200 0
+2026-01-31 17:11:37 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/chat_template.json HTTP/1.1" 307 0
+2026-01-31 17:11:37 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/chat_template.json HTTP/1.1" 200 0
+2026-01-31 17:11:37 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/chat_template.jinja HTTP/1.1" 404 0
+2026-01-31 17:11:37 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/audio_tokenizer_config.json HTTP/1.1" 404 0
+2026-01-31 17:11:55 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /lerobot/smolvla_base/resolve/main/model.safetensors HTTP/1.1" 302 0
+2026-01-31 17:11:57 | INFO     | __main__ | Model loaded in 26.77s
+2026-01-31 17:11:57 | INFO     | __main__ | Policy type: SmolVLAPolicy
+2026-01-31 17:11:57 | INFO     | __main__ | Policy config: SmolVLAConfig(n_obs_steps=1, input_features={'observation.state': PolicyFeature(type=<FeatureType.STATE: 'STATE'>, shape=(6,)), 'observation.images.camera1': PolicyFeature(type=<FeatureType.VISUAL: 'VISUAL'>, shape=(3, 256, 256)), 'observation.images.camera2': PolicyFeature(type=<FeatureType.VISUAL: 'VISUAL'>, shape=(3, 256, 256)), 'observation.images.camera3': PolicyFeature(type=<FeatureType.VISUAL: 'VISUAL'>, shape=(3, 256, 256))}, output_features={'action': PolicyFeature(type=<FeatureType.ACTION: 'ACTION'>, shape=(6,))}, device='cuda', use_amp=False, use_peft=False, push_to_hub=True, repo_id=None, private=None, tags=None, license=None, pretrained_path=None, chunk_size=50, n_action_steps=50, normalization_mapping={'VISUAL': <NormalizationMode.IDENTITY: 'IDENTITY'>, 'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>, 'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>}, max_state_dim=32, max_action_dim=32, resize_imgs_with_padding=(512, 512), empty_cameras=0, adapt_to_pi_aloha=False, use_delta_joint_actions_aloha=False, tokenizer_max_length=48, num_steps=10, use_cache=True, freeze_vision_encoder=True, train_expert_only=True, train_state_proj=True, optimizer_lr=0.0001, optimizer_betas=(0.9, 0.95), optimizer_eps=1e-08, optimizer_weight_decay=1e-10, optimizer_grad_clip_norm=10.0, scheduler_warmup_steps=1000, scheduler_decay_steps=30000, scheduler_decay_lr=2.5e-06, vlm_model_name='HuggingFaceTB/SmolVLM2-500M-Video-Instruct', load_vlm_weights=True, add_image_special_tokens=False, attention_mode='cross_attn', prefix_length=0, pad_language_to='max_length', num_expert_layers=0, num_vlm_layers=16, self_attn_every_n_layers=2, expert_width_multiplier=0.75, min_period=0.004, max_period=4.0, rtc_config=None)
+2026-01-31 17:11:57 | INFO     | __main__ | Total parameters: 450,046,176 (450.0M)
+2026-01-31 17:11:57 | INFO     | __main__ | Creating pre/post processors...
+2026-01-31 17:11:57 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /lerobot/smolvla_base/resolve/main/policy_preprocessor.json HTTP/1.1" 307 0
+2026-01-31 17:11:57 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/lerobot/smolvla_base/c83c3163b8ca9b7e67c509fffd9121e66cb96205/policy_preprocessor.json HTTP/1.1" 200 0
+2026-01-31 17:11:57 | DEBUG    | filelock | Attempting to acquire lock 2155244815440 on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\4df8f7cbce54095074f9cf31b663e5af5c006f85.lock
+2026-01-31 17:11:57 | DEBUG    | filelock | Lock 2155244815440 acquired on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\4df8f7cbce54095074f9cf31b663e5af5c006f85.lock
+2026-01-31 17:11:57 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "GET /api/resolve-cache/models/lerobot/smolvla_base/c83c3163b8ca9b7e67c509fffd9121e66cb96205/policy_preprocessor.json HTTP/1.1" 200 None
+2026-01-31 17:11:57 | DEBUG    | filelock | Attempting to release lock 2155244815440 on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\4df8f7cbce54095074f9cf31b663e5af5c006f85.lock
+2026-01-31 17:11:57 | DEBUG    | filelock | Lock 2155244815440 released on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\4df8f7cbce54095074f9cf31b663e5af5c006f85.lock
+2026-01-31 17:11:57 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2026-01-31 17:11:57 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/tokenizer_config.json HTTP/1.1" 200 0
+2026-01-31 17:11:58 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "GET /api/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2026-01-31 17:11:58 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "GET /api/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/tree/main?recursive=True&expand=False HTTP/1.1" 200 9294
+2026-01-31 17:11:58 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /lerobot/smolvla_base/resolve/main/policy_preprocessor_step_5_normalizer_processor.safetensors HTTP/1.1" 302 0
+2026-01-31 17:11:58 | DEBUG    | filelock | Attempting to acquire lock 2155245322512 on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\490ab239d96e263687c0b2e386a0afbc235a2eceb9857c36ed32f2f162a3e7c8.lock
+2026-01-31 17:11:58 | DEBUG    | filelock | Lock 2155245322512 acquired on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\490ab239d96e263687c0b2e386a0afbc235a2eceb9857c36ed32f2f162a3e7c8.lock
+2026-01-31 17:11:58 | WARNING  | huggingface_hub.file_download | Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-01-31 17:11:58 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "GET /lerobot/smolvla_base/resolve/main/policy_preprocessor_step_5_normalizer_processor.safetensors HTTP/1.1" 302 1419
+2026-01-31 17:11:58 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): cas-bridge.xethub.hf.co:443
+2026-01-31 17:11:59 | DEBUG    | urllib3.connectionpool | https://cas-bridge.xethub.hf.co:443 "GET /xet-bridge-us/683c069f3f2842f6afffe5ff/e34861cf9ca6f061d82e9c0b7cda0a8e7ad9da2a26de289e3446980a14b76e66?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20260131%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260131T221159Z&X-Amz-Expires=3600&X-Amz-Signature=c10ec7ffac93aa70157753e43129ea6b2abb91b828ebfaa4c548198ade8e4cfc&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=6811b8192c338e2de8898542&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27policy_preprocessor_step_5_normalizer_processor.safetensors%3B+filename%3D%22policy_preprocessor_step_5_normalizer_processor.safetensors%22%3B&x-id=GetObject&Expires=1769901119&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc2OTkwMTExOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82ODNjMDY5ZjNmMjg0MmY2YWZmZmU1ZmYvZTM0ODYxY2Y5Y2E2ZjA2MWQ4MmU5YzBiN2NkYTBhOGU3YWQ5ZGEyYTI2ZGUyODllMzQ0Njk4MGExNGI3NmU2NioifV19&Signature=IskcTC0w~acJz04Me8IjGBnrNDBppYf79bL-n-IdSgqJaPt9IaHfvp8VT0HkAaQIF1ur97taPWqInmIw-Mp00Yis-g6P5dBdPvPTkMkniKGQ9hfJXgxLh3-trrmrvqE2Ppa7a~NzNhrVhozg~dAzGi304i5UcOCnNWo7VjyF19826BhAJ4sfvkjVaVreWUiOYSczVQhUe4jXjACxBX1-2lhtwk3KKbGgd2k3c7MDIcxdBluidXVXD5WEuDR1QeZ0Y4M30H1mFIQFFGl0eAKUFQ-z3UHkJO1rgQ7PXibHCSCUEG8qKaYjV71S5XnAvROZdKaTPqoYqKPpjcuhO40DCw__&Key-Pair-Id=K2L8F4GPSG1IFC HTTP/1.1" 200 640
+2026-01-31 17:11:59 | DEBUG    | filelock | Attempting to release lock 2155245322512 on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\490ab239d96e263687c0b2e386a0afbc235a2eceb9857c36ed32f2f162a3e7c8.lock
+2026-01-31 17:11:59 | DEBUG    | filelock | Lock 2155245322512 released on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\490ab239d96e263687c0b2e386a0afbc235a2eceb9857c36ed32f2f162a3e7c8.lock
+2026-01-31 17:11:59 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /lerobot/smolvla_base/resolve/main/policy_postprocessor.json HTTP/1.1" 307 0
+2026-01-31 17:11:59 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/lerobot/smolvla_base/c83c3163b8ca9b7e67c509fffd9121e66cb96205/policy_postprocessor.json HTTP/1.1" 200 0
+2026-01-31 17:11:59 | DEBUG    | filelock | Attempting to acquire lock 2154040087504 on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\6f8997e5be18c67bad9377dd2cd9622ba38b5ae3.lock
+2026-01-31 17:11:59 | DEBUG    | filelock | Lock 2154040087504 acquired on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\6f8997e5be18c67bad9377dd2cd9622ba38b5ae3.lock
+2026-01-31 17:11:59 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "GET /api/resolve-cache/models/lerobot/smolvla_base/c83c3163b8ca9b7e67c509fffd9121e66cb96205/policy_postprocessor.json HTTP/1.1" 200 660
+2026-01-31 17:11:59 | DEBUG    | filelock | Attempting to release lock 2154040087504 on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\6f8997e5be18c67bad9377dd2cd9622ba38b5ae3.lock
+2026-01-31 17:11:59 | DEBUG    | filelock | Lock 2154040087504 released on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\6f8997e5be18c67bad9377dd2cd9622ba38b5ae3.lock
+2026-01-31 17:12:00 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /lerobot/smolvla_base/resolve/main/policy_postprocessor_step_0_unnormalizer_processor.safetensors HTTP/1.1" 302 0
+2026-01-31 17:12:00 | DEBUG    | filelock | Attempting to acquire lock 2155245324048 on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\490ab239d96e263687c0b2e386a0afbc235a2eceb9857c36ed32f2f162a3e7c8.lock
+2026-01-31 17:12:00 | DEBUG    | filelock | Lock 2155245324048 acquired on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\490ab239d96e263687c0b2e386a0afbc235a2eceb9857c36ed32f2f162a3e7c8.lock
+2026-01-31 17:12:00 | WARNING  | huggingface_hub.file_download | Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-01-31 17:12:00 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "GET /lerobot/smolvla_base/resolve/main/policy_postprocessor_step_0_unnormalizer_processor.safetensors HTTP/1.1" 302 1425
+2026-01-31 17:12:00 | DEBUG    | urllib3.connectionpool | https://cas-bridge.xethub.hf.co:443 "GET /xet-bridge-us/683c069f3f2842f6afffe5ff/e34861cf9ca6f061d82e9c0b7cda0a8e7ad9da2a26de289e3446980a14b76e66?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20260131%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260131T221201Z&X-Amz-Expires=3600&X-Amz-Signature=accec4557c06f794e50fce60fcb93300aca2a26ad170742c0751528259c3f75a&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=6811b8192c338e2de8898542&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27policy_postprocessor_step_0_unnormalizer_processor.safetensors%3B+filename%3D%22policy_postprocessor_step_0_unnormalizer_processor.safetensors%22%3B&x-id=GetObject&Expires=1769901121&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc2OTkwMTEyMX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82ODNjMDY5ZjNmMjg0MmY2YWZmZmU1ZmYvZTM0ODYxY2Y5Y2E2ZjA2MWQ4MmU5YzBiN2NkYTBhOGU3YWQ5ZGEyYTI2ZGUyODllMzQ0Njk4MGExNGI3NmU2NioifV19&Signature=dnfxqnL51Kw69FZoc7PoM5eiLmel69si5QjzBrS0ezSHiclC9FFmsnDM4sKPYucfeuuCUYS6~gAzodwFkiZ1W5HGQBlbWVMZ12w2FYR2s8oTu4vlLptNFR7NonksdzhRMOPacc-Ax4XLtH1MG-HgeVp6irrvRflXTEKSeV4wgxO2OiJe16Odhhq8o9vo5s-qUPRfR~luYmqaubTeOOFz7SFxY7sUsaUuyVNWPRcJ~qcf51Zmvv2Ty4jqU5nueDM6h92B-KFM8hO9oUp96FuX4ZgajnyfYGRyCddEGIvo8B81oZLwv9m7iE02qjukIbyoN7IXdFzs3L59ABDPUtAy3w__&Key-Pair-Id=K2L8F4GPSG1IFC HTTP/1.1" 200 640
+2026-01-31 17:12:00 | DEBUG    | filelock | Attempting to release lock 2155245324048 on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\490ab239d96e263687c0b2e386a0afbc235a2eceb9857c36ed32f2f162a3e7c8.lock
+2026-01-31 17:12:00 | DEBUG    | filelock | Lock 2155245324048 released on C:\Users\dhruv\.cache\huggingface\hub\.locks\models--lerobot--smolvla_base\490ab239d96e263687c0b2e386a0afbc235a2eceb9857c36ed32f2f162a3e7c8.lock
+2026-01-31 17:12:00 | INFO     | __main__ | Processors created
+2026-01-31 17:12:00 | INFO     | __main__ | Moving model to cuda...
+2026-01-31 17:12:00 | INFO     | __main__ | Model moved to cuda in 0.01s
+2026-01-31 17:12:00 | INFO     | __main__ | Model set to eval mode
+2026-01-31 17:12:00 | INFO     | __main__ | [After model load] GPU Memory - Allocated: 0.852 GB | Reserved: 1.535 GB | Free: 5.145 GB
+2026-01-31 17:12:00 | INFO     | __main__ | ----------------------------------------------------------------------
+2026-01-31 17:12:00 | INFO     | __main__ | CREATING RAW OBSERVATION
+2026-01-31 17:12:00 | INFO     | __main__ | ----------------------------------------------------------------------
+2026-01-31 17:12:00 | INFO     | __main__ | Checking policy config for expected input features...
+2026-01-31 17:12:00 | INFO     | __main__ | Image features from config: {'observation.images.camera1': PolicyFeature(type=<FeatureType.VISUAL: 'VISUAL'>, shape=(3, 256, 256)), 'observation.images.camera2': PolicyFeature(type=<FeatureType.VISUAL: 'VISUAL'>, shape=(3, 256, 256)), 'observation.images.camera3': PolicyFeature(type=<FeatureType.VISUAL: 'VISUAL'>, shape=(3, 256, 256))}
+2026-01-31 17:12:00 | INFO     | __main__ |   observation.images.camera1 -> camera1
+2026-01-31 17:12:00 | INFO     | __main__ |   observation.images.camera2 -> camera2
+2026-01-31 17:12:00 | INFO     | __main__ |   observation.images.camera3 -> camera3
+2026-01-31 17:12:00 | INFO     | __main__ | Creating dummy images: 256x256x3
+2026-01-31 17:12:00 | INFO     | __main__ | Test image created with shape: (256, 256, 3), dtype: uint8
+2026-01-31 17:12:00 | INFO     | __main__ | State shape: (6,), dtype: float32
+2026-01-31 17:12:00 | INFO     | __main__ | Added image: camera1 shape=(256, 256, 3)
+2026-01-31 17:12:00 | INFO     | __main__ | Added image: camera2 shape=(256, 256, 3)
+2026-01-31 17:12:00 | INFO     | __main__ | Added image: camera3 shape=(256, 256, 3)
+2026-01-31 17:12:00 | INFO     | __main__ | Added agent_pos: shape=(6,)
+2026-01-31 17:12:00 | INFO     | __main__ | Raw observation dict keys:
+2026-01-31 17:12:00 | INFO     | __main__ |   camera1: shape=(256, 256, 3), dtype=uint8
+2026-01-31 17:12:00 | INFO     | __main__ |   camera2: shape=(256, 256, 3), dtype=uint8
+2026-01-31 17:12:00 | INFO     | __main__ |   camera3: shape=(256, 256, 3), dtype=uint8
+2026-01-31 17:12:00 | INFO     | __main__ |   agent_pos: shape=(6,), dtype=float32
+2026-01-31 17:12:00 | INFO     | __main__ | ======================================================================
+2026-01-31 17:12:00 | INFO     | __main__ | RUNNING INFERENCE TESTS
+2026-01-31 17:12:00 | INFO     | __main__ | ======================================================================
+2026-01-31 17:12:00 | INFO     | __main__ | Number of test runs: 3
+2026-01-31 17:12:00 | INFO     | __main__ | ----------------------------------------------------------------------
+2026-01-31 17:12:00 | INFO     | __main__ | INFERENCE RUN #1
+2026-01-31 17:12:00 | INFO     | __main__ | ----------------------------------------------------------------------
+2026-01-31 17:12:00 | INFO     | __main__ | Task: pick up the red object
+2026-01-31 17:12:00 | INFO     | __main__ | [Before inference #1] GPU Memory - Allocated: 0.852 GB | Reserved: 1.535 GB | Free: 5.145 GB
+2026-01-31 17:12:00 | INFO     | __main__ | Using lerobot.policies.utils
+2026-01-31 17:12:00 | INFO     | __main__ | Building inference frame...
+2026-01-31 17:12:00 | INFO     | __main__ | Dataset features: {'observation.images.camera1': {'dtype': 'image', 'shape': (3, 256, 256)}, 'observation.images.camera2': {'dtype': 'image', 'shape': (3, 256, 256)}, 'observation.images.camera3': {'dtype': 'image', 'shape': (3, 256, 256)}}
+2026-01-31 17:12:00 | INFO     | __main__ | Inference frame built in 0.0060s
+2026-01-31 17:12:00 | INFO     | __main__ | Preprocessing observation...
+2026-01-31 17:12:00 | INFO     | __main__ | Preprocessing completed in 0.0605s
+2026-01-31 17:12:00 | INFO     | __main__ | Processed observation keys: dict_keys(['action', 'next.reward', 'next.done', 'next.truncated', 'info', 'task', 'observation.images.camera1', 'observation.images.camera2', 'observation.images.camera3', 'observation.language.tokens', 'observation.language.attention_mask'])
+2026-01-31 17:12:00 | INFO     | __main__ | Running policy.select_action()...
+2026-01-31 17:12:00 | ERROR    | __main__ | Test failed with error: KeyError: 'observation.state'
+Traceback (most recent call last):
+  File "C:\PAI\LePuzzlePiece\test_smolvla.py", line 445, in <module>
+    main()
+  File "C:\PAI\LePuzzlePiece\test_smolvla.py", line 415, in main
+    action, inf_time = run_inference(
+                       ^^^^^^^^^^^^^^
+  File "C:\PAI\LePuzzlePiece\test_smolvla.py", line 330, in run_inference
+    action = policy.select_action(processed_obs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PAI\LePuzzlePiece\.venv\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PAI\LePuzzlePiece\.venv\Lib\site-packages\lerobot\policies\smolvla\modeling_smolvla.py", line 342, in select_action
+    actions = self._get_action_chunk(batch, noise)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PAI\LePuzzlePiece\.venv\Lib\site-packages\lerobot\policies\smolvla\modeling_smolvla.py", line 287, in _get_action_chunk
+    state = self.prepare_state(batch)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PAI\LePuzzlePiece\.venv\Lib\site-packages\lerobot\policies\smolvla\modeling_smolvla.py", line 474, in prepare_state
+    state = batch[OBS_STATE][:, -1, :] if batch[OBS_STATE].ndim > 2 else batch[OBS_STATE]
+                                          ~~~~~^^^^^^^^^^^
+KeyError: 'observation.state'
