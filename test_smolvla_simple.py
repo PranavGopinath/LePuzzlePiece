@@ -31,37 +31,44 @@ preprocess, postprocess = make_pre_post_processors(
 img_keys = list(policy.config.image_features.keys())
 img_shape = policy.config.image_features[img_keys[0]].shape
 
-# Get state shape from config (try different attribute names)
-if hasattr(policy.config, 'input_shapes'):
-    state_shape = policy.config.input_shapes.get("observation.state", (6,))
-elif hasattr(policy.config, 'robot_state_feature'):
+# Get state shape from config
+if hasattr(policy.config, 'robot_state_feature') and policy.config.robot_state_feature:
     state_shape = policy.config.robot_state_feature.shape
-elif hasattr(policy.config, 'state_feature'):
-    state_shape = policy.config.state_feature.shape
 else:
-    # Default for SO100 robot (6 joints)
-    state_shape = (6,)
+    state_shape = (6,)  # Default for SO100 robot
 
 print(f"Image keys: {img_keys}")
 print(f"Image shape: {img_shape}, State shape: {state_shape}")
 
 # Create dummy batch
-batch = {key: torch.rand(1, *img_shape, device=device) for key in img_keys}
+# Option: Use single image duplicated across all cameras
+single_image = torch.rand(1, *img_shape, device=device)
+batch = {key: single_image for key in img_keys}  # Same image for all cameras
+
 batch["observation.state"] = torch.zeros(1, *state_shape, device=device)
 batch["task"] = ["pick up the red block"]
 
 print(f"Batch keys: {list(batch.keys())}")
+print(f"Using single image duplicated to {len(img_keys)} camera inputs")
 
 # Preprocess and run inference
-print("Running inference...")
+print("\nRunning preprocessing...")
 processed = preprocess(batch)
 print(f"Processed keys: {list(processed.keys())}")
 
+print("\nRunning inference...")
 with torch.inference_mode():
     action = policy.select_action(processed)
 
 action = postprocess(action)
 
 # Show result
-print(f"\nAction output: {action}")
+print(f"\nAction type: {type(action)}")
+if hasattr(action, 'shape'):
+    print(f"Action shape: {action.shape}")
+print(f"Action output: {action}")
+
+if torch.cuda.is_available():
+    print(f"\nGPU memory used: {torch.cuda.memory_allocated() / 1024**3:.2f} GB")
+
 print("\nDone!")
