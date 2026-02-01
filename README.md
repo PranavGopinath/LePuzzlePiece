@@ -18,7 +18,7 @@ SmolVLA is a 450M parameter Vision-Language-Action model for robotics that runs 
 ```powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
-
+does 
 **Windows (winget):**
 ```bash
 winget install --id=astral-sh.uv -e
